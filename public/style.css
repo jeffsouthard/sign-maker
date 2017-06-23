@@ -1,0 +1,49 @@
+@font-face {
+  font-family: Exo-Bold;
+  src: url(fonts/Exo-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Exo-Regular;
+  src: url(fonts/Exo-Regular.ttf) format('truetype');
+}
+
+body {
+    margin: 0;
+}
+
+.sign {
+    background-color: white;
+    width: 11in;
+    height: 8.25in;
+/*        width: 100vw;
+        height: 77vw;*/
+}
+
+.name-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.abbrev {
+    color: black;
+    text-align: center;
+    font-size: 160px;
+    font-family: 'Exo-Bold', Fallback, sans-serif;
+} 
+
+.name {
+    color: black;
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Exo-Regular', Fallback, sans-serif;
+} 
+
+.attributes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
