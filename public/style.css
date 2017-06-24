@@ -14,7 +14,7 @@ body {
 
 .sign {
     background-color: white;    
-    background-color: #eeeeee;
+/*    background-color: #eeeeee;*/
     width: 100vw;
     height: 76vw;
     display: flex;
@@ -31,7 +31,7 @@ body {
     align-items: center;
 }
 
-.abbrev {
+.title {
     width: 90vw;
     color: black;
     text-align: center;
@@ -39,7 +39,7 @@ body {
     font-family: 'Exo-Bold', Fallback, sans-serif;
 } 
 
-.name {
+.subtitle {
     width: 90vw;
     color: black;
     text-align: center;
@@ -54,7 +54,7 @@ body {
 }
 
 .editable:hover {
-    border: 1px solid rgba(100,100,255,0.5); 
+/*    border: 1px solid rgba(0,0,0,0.2);*/
 }
 
 .attributes-container {
