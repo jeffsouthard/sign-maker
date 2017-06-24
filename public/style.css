@@ -66,9 +66,8 @@ body {
 }
 
 .attribute {
-/*    max-width: 15vw;*/
+    width: 15vw;
     flex-shrink: 1;
-/*    flex-grow: 1;*/
     margin: 1vw;
     
 }
