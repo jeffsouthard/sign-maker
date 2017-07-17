@@ -4,8 +4,8 @@ $( document ).ready(function() {
     var urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('title')) $('#title').text(urlParams.get('title'));
     if (urlParams.has('subtitle')) $('#subtitle').text(urlParams.get('subtitle'));
+    if (urlParams.has('attributes')) setAttributes(urlParams.get('attributes'));
 
-   
     $( ".adjustFontSize" ).each(function() {
         adjustFontSize(this);
     });
@@ -31,6 +31,21 @@ $( document ).ready(function() {
     
     
 });
+
+function setAttributes(attributesString) {
+  function buildBadge(attribute) {
+    var img = $('<img />', {
+      id: attribute + '-badge',
+      src: 'icons/' + attribute + '.svg',
+      alt: 'attribute'
+    });
+    img.appendTo($('.attributes-container'));
+  }
+  var attributes = attributesString.split(",").map(str => str.trim());
+  for(var attribute of attributes) {
+    buildBadge(attribute);
+  }
+}
 
 function adjustFontSize(element) {
     el = $(element);
