@@ -65,7 +65,7 @@ body {
     align-items: center;
 }
 
-.attribute {
+.badge {
     width: 15vw;
     flex-shrink: 1;
     margin: 1vw;

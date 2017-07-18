@@ -34,6 +34,7 @@ function setBadges(badgesString) {
 function buildBadge(badgeName) {
   var img = $('<img />', {
     id: badgeName + '-badge',
+    class: 'badge',
     src: 'icons/' + badgeName + '.svg',
     alt: badgeName
   });
