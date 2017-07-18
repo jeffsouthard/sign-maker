@@ -1,13 +1,13 @@
 const BADGE_NAMES = [
-  'balanced-team',
-  'co-location',
-  'emergent-velocity',
-  'frequent-releases',
-  'lean-experiments',
-  'metric-driven',
   'pairing',
+  'co-location',
+  'tdd',
+  'emergent-velocity',
   'release-train',
-  'tdd'
+  'frequent-releases',
+  'balanced-team',
+  'metric-driven',
+  'lean-experiments'
 ];
 $( document ).ready(function() {
   for(var badgeName of BADGE_NAMES) {
