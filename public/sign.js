@@ -4,7 +4,7 @@ $( document ).ready(function() {
     var urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('title')) $('#title').text(urlParams.get('title'));
     if (urlParams.has('subtitle')) $('#subtitle').text(urlParams.get('subtitle'));
-    if (urlParams.has('attributes')) setAttributes(urlParams.get('attributes'));
+    if (urlParams.has('badges')) setBadges(urlParams.get('badges'));
 
     $( ".adjustFontSize" ).each(function() {
         adjustFontSize(this);
@@ -32,18 +32,18 @@ $( document ).ready(function() {
     
 });
 
-function setAttributes(attributesString) {
-  function buildBadge(attribute) {
+function setBadges(badgesString) {
+  function buildBadge(badgeName) {
     var img = $('<img />', {
-      id: attribute + '-badge',
-      src: 'icons/' + attribute + '.svg',
-      alt: 'attribute'
+      id: badgeName + '-badge',
+      src: 'icons/' + badgeName + '.svg',
+      alt: badgeName
     });
-    img.appendTo($('.attributes-container'));
+    img.appendTo($('.badges-container'));
   }
-  var attributes = attributesString.split(",").map(str => str.trim());
-  for(var attribute of attributes) {
-    buildBadge(attribute);
+  var badgeNames = badgesString.split(",").map(str => str.trim());
+  for(var badgeName of badgeNames) {
+    buildBadge(badgeName);
   }
 }
 
