@@ -1,11 +1,11 @@
 @font-face {
   font-family: Exo-Bold;
-  src: url(fonts/Exo-Bold.ttf) format('truetype');
+  src: url(../fonts/Exo-Bold.ttf) format('truetype');
 }
 
 @font-face {
   font-family: Exo-Regular;
-  src: url(fonts/Exo-Regular.ttf) format('truetype');
+  src: url(../fonts/Exo-Regular.ttf) format('truetype');
 }
 
 body {
@@ -70,4 +70,16 @@ body {
     flex-shrink: 1;
     margin: 1vw;
     
+}
+
+.badge-form {
+  background-color: #0077C0;
+}
+
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
 }

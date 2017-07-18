@@ -8,8 +8,9 @@
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
-  <script src="sign.js"></script>
-  <link rel="stylesheet" href="style.css" type="text/css" />
+  <script src="javascript/badges.js"></script>
+  <script src="javascript/sign.js"></script>
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
   <style type="text/css" media="print">
       
   @page 
@@ -22,9 +23,13 @@
 
 </head>
 <body>
+<div class="badge-form no-print">
+  <form>
+  </form>
+</div>
 <div class="sign">
   <div class="title-container">
-    <div id="title" class="title editable adjustFontSize" contenteditable="true">Title</div>
+    <div id="title" class="title editable adjust-font-size" contenteditable="true">Title</div>
     <div id="subtitle" class="subtitle editable" contenteditable="true">Subtitle</div>
   </div>
   <div class="badges-container">

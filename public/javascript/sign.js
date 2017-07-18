@@ -6,13 +6,22 @@ $( document ).ready(function() {
     if (urlParams.has('subtitle')) $('#subtitle').text(urlParams.get('subtitle'));
     if (urlParams.has('badges')) setBadges(urlParams.get('badges'));
 
-    $( ".adjustFontSize" ).each(function() {
+    $( ".adjust-font-size" ).each(function() {
         adjustFontSize(this);
     });
     
-    $( ".adjustFontSize" ).change(function() {
+    $( ".adjust-font-size" ).change(function() {
         adjustFontSize(this);
     });
+
+    $( ".badge-checkbox" ).change(function() {
+      if(this.checked) {
+        buildBadge(this.value);
+      } else {
+        destroyBadge(this.value);
+      }
+    });
+
     
     // Trigger change event on contenteditable elements
     // From https://stackoverflow.com/questions/1391278/contenteditable-change-events
@@ -31,21 +40,6 @@ $( document ).ready(function() {
     
     
 });
-
-function setBadges(badgesString) {
-  function buildBadge(badgeName) {
-    var img = $('<img />', {
-      id: badgeName + '-badge',
-      src: 'icons/' + badgeName + '.svg',
-      alt: badgeName
-    });
-    img.appendTo($('.badges-container'));
-  }
-  var badgeNames = badgesString.split(",").map(str => str.trim());
-  for(var badgeName of badgeNames) {
-    buildBadge(badgeName);
-  }
-}
 
 function adjustFontSize(element) {
     el = $(element);
