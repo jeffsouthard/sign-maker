@@ -1,0 +1,47 @@
+/* Styling that spans multiple styles */
+
+body {
+    margin: 0;
+}
+
+.badge-form {
+  background-color: #ddd;
+  padding: 5px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  line-height: 150%;
+}
+
+label {
+    margin-right: 10px;
+    
+}
+
+.sign {
+    background-color: white;
+    width: 100vw;
+    height: 76vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.editable {
+    border: 1px solid rgba(0,0,0,0);  
+}
+
+.editable:hover {
+/*    border: 1px solid rgba(0,0,0,0.2);*/
+}
+
+
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
+

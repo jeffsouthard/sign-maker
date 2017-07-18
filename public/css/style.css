@@ -1,3 +1,5 @@
+/* Styling to particular brand or company; in this first case, Allstate */
+
 @font-face {
   font-family: Exo-Bold;
   src: url(../fonts/Exo-Bold.ttf) format('truetype');
@@ -6,21 +8,6 @@
 @font-face {
   font-family: Exo-Regular;
   src: url(../fonts/Exo-Regular.ttf) format('truetype');
-}
-
-body {
-    margin: 0;
-}
-
-.sign {
-    background-color: white;    
-/*    background-color: #eeeeee;*/
-    width: 100vw;
-    height: 76vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .name-container {
@@ -49,37 +36,20 @@ body {
 
 }
 
-.editable {
-    border: 1px solid rgba(0,0,0,0);  
-}
-
-.editable:hover {
-/*    border: 1px solid rgba(0,0,0,0.2);*/
-}
-
 .badges-container {
     height: 25vw;
+    width: 80vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .badge {
     width: 15vw;
     flex-shrink: 1;
-    margin: 1vw;
+    margin: 0.5vw 1.0vw;
     
 }
 
-.badge-form {
-  background-color: #0077C0;
-}
-
-@media print
-{
-    .no-print, .no-print *
-    {
-        display: none !important;
-    }
-}
