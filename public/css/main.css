@@ -4,50 +4,12 @@ body {
     margin: 0;
 }
 
-.badge-form {
-  background-color: #e6e6e6;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  line-height: 150%;
-  position: absolute;
-  top: 75vw;
-  right: 10vw;
-  left: 10vw;
-  text-align: center;
-}
 
 label {
     margin-right: 10px;
-}
-
-.sign {
-    background-color: white;
-    width: 100vw;
-    height: 76vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    white-space: nowrap;
 }
 
 
-.editable {
-    border: 1px solid rgba(0,0,0,0);  
-}
-
-.editable:hover {
-/*    border: 1px solid rgba(0,0,0,0.2);*/
-}
-
-
-@media print
-{
-    .no-print, .no-print *
-    {
-        display: none !important;
-    }
-}
 
 

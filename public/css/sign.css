@@ -50,6 +50,27 @@
     width: 15vw;
     flex-shrink: 1;
     margin: 0vw 0vw;
-    
+
 }
+
+.sign {
+    background-color: white;
+    width: 100vw;
+    height: 76vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.editable {
+    border: 1px solid rgba(0,0,0,0);
+}
+
+.editable:hover {
+/*    border: 1px solid rgba(0,0,0,0.2);*/
+}
+
+
 

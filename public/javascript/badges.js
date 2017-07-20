@@ -18,9 +18,10 @@ $( document ).ready(function() {
         class: 'badge-checkbox',
         value: badgeName
       });
-      checkbox.appendTo($('.badge-form form'));
-      var label = $('<label for="'+badgeName+'-checkbox">'+badgeName+'</label>');
-      label.appendTo($('.badge-form form'));
+
+      var label = $('<label />').text(badgeName);
+      checkbox.prependTo(label);
+      label.appendTo($('.badge-form'));
   }
 });
 

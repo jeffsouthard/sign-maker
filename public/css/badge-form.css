@@ -1,0 +1,17 @@
+.badge-form {
+  background-color: #e6e6e6;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  line-height: 150%;
+  position: absolute;
+  top: 75vw;
+  right: 10vw;
+  left: 10vw;
+  text-align: center;
+}
+
+.badge-form label {
+  display: inline-block;
+}
