@@ -4,7 +4,6 @@ $( document ).ready(function() {
     var urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('title')) $('#title').text(urlParams.get('title'));
     if (urlParams.has('subtitle')) $('#subtitle').text(urlParams.get('subtitle'));
-    if (urlParams.has('badges')) setBadges(urlParams.get('badges'));
 
     $( ".adjust-font-size" ).each(function() {
         adjustFontSize(this);
@@ -13,15 +12,6 @@ $( document ).ready(function() {
     $( ".adjust-font-size" ).change(function() {
         adjustFontSize(this);
     });
-
-    $( ".badge-checkbox" ).change(function() {
-      if(this.checked) {
-        buildBadge(this.value);
-      } else {
-        destroyBadge(this.value);
-      }
-    });
-
     
     // Trigger change event on contenteditable elements
     // From https://stackoverflow.com/questions/1391278/contenteditable-change-events

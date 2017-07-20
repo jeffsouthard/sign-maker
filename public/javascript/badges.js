@@ -22,27 +22,48 @@ $( document ).ready(function() {
       var label = $('<label />').text(badgeName);
       checkbox.prependTo(label);
       label.appendTo($('.badge-form'));
+
+      buildBadge(badgeName).hide();
   }
+
+  setBadgesFromQueryString();
+
+  $( ".badge-checkbox" ).change(function() {
+    if(this.checked) {
+      showBadge(this.value);
+    } else {
+      hideBadge(this.value);
+    }
+  });
 });
 
-function setBadges(badgesString) {
+function setBadgesFromQueryString() {
+  var urlParams = new URLSearchParams(window.location.search);
+  if (!urlParams.has('badges')) return;
+
+  var badgesString = urlParams.get('badges');
   var badgeNames = badgesString.split(",").map(str => str.trim());
   for(var badgeName of badgeNames) {
-    buildBadge(badgeName);
+    showBadge(badgeName);
+    $('#' + badgeName + '-checkbox').prop('checked', true);
   }
 }
 
 function buildBadge(badgeName) {
-  var img = $('<img />', {
+  var badge = $('<img />', {
     id: badgeName + '-badge',
     class: 'badge',
     src: 'icons/' + badgeName + '.svg',
     alt: badgeName
   });
-  img.appendTo($('.badges-container'));
-  $('#' + badgeName + '-checkbox').prop('checked', true);
+  badge.appendTo($('.badges-container'));
+  return badge;
 }
 
-function destroyBadge(badgeName) {
-  $('#' + badgeName + '-badge').remove();
+function hideBadge(badgeName) {
+  return $('#' + badgeName + '-badge').hide();
+}
+
+function showBadge(badgeName) {
+  return $('#' + badgeName + '-badge').show();
 }
