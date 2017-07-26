@@ -23,13 +23,19 @@ $( document ).ready(function() {
         var $this = $(this);
         if ($this.data('before') !== $this.html()) {
             $this.data('before', $this.html());
+            setUrlForText();
             $this.trigger('change');
         }
         return $this;
     });
-    
-    
 });
+
+function setUrlForText() {
+  var urlParams = new URLSearchParams(window.location.search);
+  urlParams.set("title", $("#title").html());
+  urlParams.set("subtitle", $("#subtitle").html());
+  window.history.replaceState(null, null, "sign.html?"+urlParams.toString());
+}
 
 function adjustFontSize(element) {
     el = $(element);
