@@ -52,10 +52,3 @@ function getFontSize(text, minSize, maxSize, units) {
         return "" + ((maxSize+minSize)/2) + units;
     } else return "" + minSize + units;
 }
-
-function getUrlParameter(name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-};
