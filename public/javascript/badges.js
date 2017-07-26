@@ -3,6 +3,7 @@ const BADGE_NAMES = [
   'co-location',
   'tdd',
   'emergent-velocity',
+  'cloud-native',
   'release-train',
   'frequent-releases',
   'balanced-team',
