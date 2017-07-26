@@ -34,6 +34,7 @@ $( document ).ready(function() {
     } else {
       hideBadge(this.value);
     }
+    setUrl();
   });
 });
 
@@ -58,6 +59,15 @@ function buildBadge(badgeName) {
   });
   badge.appendTo($('.badges-container'));
   return badge;
+}
+
+function setUrl() {
+  var urlParams = new URLSearchParams(window.location.search);
+  var checkedBadges = $.map($('.badge-checkbox'), function(badgeCheckbox) {
+    if($(badgeCheckbox).prop('checked')) return badgeCheckbox.value;
+  });
+  urlParams.set("badges", checkedBadges.join())
+  window.history.replaceState(null, null, "sign.html?"+urlParams.toString());
 }
 
 function hideBadge(badgeName) {
