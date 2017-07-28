@@ -12,19 +12,9 @@ const BADGE_NAMES = [
 ];
 $( document ).ready(function() {
   for(var badgeName of BADGE_NAMES) {
-    var checkbox = $('<input />', {
-        id: badgeName + '-badge',
-        type: 'checkbox',
-        id: badgeName + '-checkbox',
-        class: 'badge-checkbox',
-        value: badgeName
-      });
+    buildBadgeFormField(badgeName);
 
-      var label = $('<label />').text(badgeName);
-      checkbox.prependTo(label);
-      label.appendTo($('.badge-form'));
-
-      buildBadge(badgeName).hide();
+    buildBadge(badgeName).hide();
   }
 
   setBadgesFromQueryString();
@@ -49,6 +39,21 @@ function setBadgesFromQueryString() {
     showBadge(badgeName);
     $('#' + badgeName + '-checkbox').prop('checked', true);
   }
+}
+
+function buildBadgeFormField(badgeName) {
+  var checkbox = $('<input />', {
+        id: badgeName + '-badge',
+        type: 'checkbox',
+        id: badgeName + '-checkbox',
+        class: 'badge-checkbox',
+        value: badgeName
+  });
+
+  var label = $('<label />').text(badgeName);
+  checkbox.prependTo(label);
+  label.appendTo($('.badge-form'));
+  return label;
 }
 
 function buildBadge(badgeName) {
