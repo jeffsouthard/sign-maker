@@ -10,24 +10,6 @@ const BADGE_NAMES = [
   'metric-driven',
   'lean-experiments'
 ];
-$( document ).ready(function() {
-  for(var badgeName of BADGE_NAMES) {
-    buildBadgeFormField(badgeName);
-
-    buildBadge(badgeName).hide();
-  }
-
-  setBadgesFromQueryString();
-
-  $( ".badge-checkbox" ).change(function() {
-    if(this.checked) {
-      showBadge(this.value);
-    } else {
-      hideBadge(this.value);
-    }
-    setUrlForBadges();
-  });
-});
 
 function setBadgesFromQueryString() {
   var urlParams = new URLSearchParams(window.location.search);
@@ -56,14 +38,14 @@ function buildBadgeFormField(badgeName) {
   return label;
 }
 
-function buildBadge(badgeName) {
+function buildBadge(badgeName, container) {
   var badge = $('<img />', {
     id: badgeName + '-badge',
     class: 'badge',
     src: 'icons/' + badgeName + '.svg',
     alt: badgeName
   });
-  badge.appendTo($('.badges-container'));
+  badge.appendTo(container);
   return badge;
 }
 

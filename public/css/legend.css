@@ -1,0 +1,22 @@
+.legend-title {
+  text-align: center;
+  font-size: 8vw;
+  font-family: 'Exo-Bold', Fallback, sans-serif;
+}
+
+.legend {
+  list-style: none;
+}
+
+.legend li {
+   display: -webkit-flex;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.legend span {
+  font-size: 4vw;
+  font-family: 'Exo-Bold', Fallback, sans-serif;
+  padding-left: 10px;
+}

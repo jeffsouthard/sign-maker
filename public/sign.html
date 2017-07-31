@@ -3,13 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <title>Sign Builder</title>
-  <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css"> -->
   <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
   <script src="javascript/badges.js"></script>
   <script src="javascript/sign.js"></script>
+  <script>
+    $(document).ready(function() {
+      for(var badgeName of BADGE_NAMES) {
+        buildBadgeFormField(badgeName);
+        buildBadge(badgeName, $('.badges-container')).hide();
+      }
+
+      setBadgesFromQueryString();
+
+      $( ".badge-checkbox" ).change(function() {
+        if(this.checked) {
+          showBadge(this.value);
+        } else {
+          hideBadge(this.value);
+        }
+        setUrlForBadges();
+      });
+    });
+
+    $( document ).ready(function() {
+      // Use query params to set values, if present
+      var urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('title')) $('#title').text(urlParams.get('title'));
+      if (urlParams.has('subtitle')) $('#subtitle').text(urlParams.get('subtitle'));
+
+      $( ".adjust-font-size" ).each(function() {
+          adjustFontSize(this);
+      });
+
+      $( ".adjust-font-size" ).change(function() {
+          adjustFontSize(this);
+      });
+
+      // Trigger change event on contenteditable elements
+      // From https://stackoverflow.com/questions/1391278/contenteditable-change-events
+      $('body').on('focus', '[contenteditable]', function() {
+          var $this = $(this);
+          $this.data('before', $this.html());
+          return $this;
+      }).on('blur keyup paste input', '[contenteditable]', function() {
+          var $this = $(this);
+          if ($this.data('before') !== $this.html()) {
+              $this.data('before', $this.html());
+              setUrlForText();
+              $this.trigger('change');
+          }
+          return $this;
+      });
+    });
+  </script>
+
+
   <link rel="stylesheet" href="css/main.css" type="text/css" />
   <link rel="stylesheet" href="css/badge-form.css" type="text/css" />
   <link rel="stylesheet" href="css/sign.css" type="text/css" />

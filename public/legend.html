@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Legend</title>
+
+  <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+  <script src="javascript/badges.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      for(var badgeName of BADGE_NAMES) {
+        var legendItem = $("<li></li>");
+        buildBadge(badgeName, legendItem);
+        $("<span>"+badgeName+"</span>").appendTo(legendItem);
+        legendItem.appendTo($(".legend"));
+      }
+    });
+  </script>
+  <link rel="stylesheet" href="css/sign.css" type="text/css" />
+  <link rel="stylesheet" href="css/legend.css" type="text/css" />
+
+  <style type="text/css" media="print">
+
+  @page
+  {
+      size: 8.5in 17in;
+      margin: 0mm;
+  }
+
+  </style>
+
+</head>
+<body>
+<h1 class="legend-title">Team Practices</h1>
+<ul class="legend"></ul>
+</body>
+</html>
