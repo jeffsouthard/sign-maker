@@ -15,8 +15,13 @@
    align-items: center;
 }
 
+.legend img {
+  height: 110px;
+  width: 110px;
+}
+
 .legend span {
-  font-size: 4vw;
-  font-family: 'Exo-Bold', Fallback, sans-serif;
+  font-size: 7vw;
+  font-family: 'Exo-Regular', Fallback, sans-serif;
   padding-left: 10px;
 }
