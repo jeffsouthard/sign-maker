@@ -1,0 +1,54 @@
+
+.editable {
+    border: 1px solid rgba(0,0,0,0);
+}
+
+.editable:hover {
+   border: 1px solid rgba(0,0,0,0.2);
+}
+
+.sign {
+    background-color: white;
+    width: 100vw;
+    height: 76vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign > .title-container {
+    height: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign > .title-container > .title {
+    width: 90vw;
+    text-align: center;
+    font-size: 15vw;
+}
+
+.sign > .title-container > .subtitle {
+    width: 90vw;
+    text-align: center;
+    font-size: 8vw;
+}
+
+.badges-container {
+    height: 25vw;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.badges-container > .badge {
+    width: 15vw;
+    flex-shrink: 1;
+    margin: 0vw 0vw;
+}

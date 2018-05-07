@@ -1,0 +1,21 @@
+/* Styling to particular brand or company; in this first case, Allstate */
+
+@font-face {
+  font-family: Exo-Bold;
+  src: url(../fonts/Exo-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Exo-Regular;
+  src: url(../fonts/Exo-Regular.ttf) format('truetype');
+}
+
+.sign > .title-container > .title {
+    color: black;
+    font-family: 'Exo-Bold', Fallback, sans-serif;
+}
+
+.sign > .title-container > .subtitle {
+    color: black;
+    font-family: 'Exo-Regular', Fallback, sans-serif;
+}
