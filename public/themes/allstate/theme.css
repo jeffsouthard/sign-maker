@@ -10,6 +10,8 @@
   src: url(../fonts/Exo-Regular.ttf) format('truetype');
 }
 
+/* Sign page */
+
 .sign > .title-container > .title {
     color: black;
     font-family: 'Exo-Bold', Fallback, sans-serif;
@@ -18,4 +20,10 @@
 .sign > .title-container > .subtitle {
     color: black;
     font-family: 'Exo-Regular', Fallback, sans-serif;
+}
+
+/* Legend page */
+
+.legend-title {
+  font-family: 'Exo-Bold', Fallback, sans-serif;
 }
