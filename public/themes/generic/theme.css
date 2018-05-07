@@ -1,0 +1,29 @@
+/* allstate theme */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+/* Sign page */
+
+.sign {
+  font-family: 'Roboto', Fallback, sans-serif;
+  color: black;
+}
+
+.sign .title {
+    font-weight: 700;
+}
+
+.sign .subtitle {
+    font-weight: 400;
+}
+
+/* Legend page */
+
+.legend {
+  font-family: 'Roboto', Fallback, sans-serif;
+  color: black;
+}
+
+.legend-title {
+  font-weight: 400;
+}

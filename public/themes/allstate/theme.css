@@ -1,4 +1,4 @@
-/* Styling to particular brand or company; in this first case, Allstate */
+/* Experimental Allstate theme */
 
 @font-face {
   font-family: Exo-Bold;
@@ -12,12 +12,12 @@
 
 /* Sign page */
 
-.sign > .title-container > .title {
+.sign .title {
     color: black;
     font-family: 'Exo-Bold', Fallback, sans-serif;
 }
 
-.sign > .title-container > .subtitle {
+.sign .subtitle {
     color: black;
     font-family: 'Exo-Regular', Fallback, sans-serif;
 }
