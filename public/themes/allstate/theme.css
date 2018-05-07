@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: Exo-Bold;
-  src: url(../fonts/Exo-Bold.ttf) format('truetype');
+  src: url(fonts/Exo-Bold.ttf) format('truetype');
 }
 
 @font-face {
   font-family: Exo-Regular;
-  src: url(../fonts/Exo-Regular.ttf) format('truetype');
+  src: url(fonts/Exo-Regular.ttf) format('truetype');
 }
 
 /* Sign page */
