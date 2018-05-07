@@ -42,7 +42,7 @@ function buildBadge(badgeName, container) {
   var badge = $('<img />', {
     id: badgeName + '-badge',
     class: 'badge',
-    src: 'icons/' + badgeName + '.svg',
+    src: 'themes/allstate/badges/' + badgeName + '.svg',
     alt: badgeName
   });
   badge.appendTo(container);
