@@ -10,15 +10,11 @@
       crossorigin="anonymous"></script>
   <script src="javascript/themes.js"></script>
   <script src="javascript/badges.js"></script>
+  <script src="javascript/legend-poster.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       setThemeFromQueryString();
-      for(var badgeName of BADGE_NAMES) {
-        var legendItem = $("<li></li>");
-        buildBadge(badgeName, legendItem);
-        $("<span>"+badgeName+"</span>").appendTo(legendItem);
-        legendItem.appendTo($(".legend"));
-      }
+      setupLegendPoster();
     });
   </script>
   <link rel="stylesheet" href="css/main.css" type="text/css" />

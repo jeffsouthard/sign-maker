@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>badges/tech/pws</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.029296875 125 0.029296875 0.01953125 125 0.01953125 125 125"></polygon>
+    </defs>
+    <g id="badges/tech/pws" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Product-Icon-Pivotal-Web-Server-256x256" transform="translate(18.000000, 18.000000)">
+            <g id="Group-3">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M125,62.5 C125,97.0175781 97.0175781,125 62.5,125 C27.9824219,125 0,97.0175781 0,62.5 C0,27.9824219 27.9824219,0 62.5,0 C97.0175781,0 125,27.9824219 125,62.5" id="Fill-1" fill="#008774" mask="url(#mask-2)"></path>
+            </g>
+            <path d="M62.5024414,71.4472656 L30.6865234,48.7495117 L62.4980469,26.0522461 L94.3129883,48.7495117 L62.5024414,71.4472656 Z M27.3242188,46.3500977 L27.3242188,51.1489258 L62.5024414,76.2460938 L97.6757813,51.1489258 L97.6757813,46.3505859 L62.4980469,21.253418 L27.3242188,46.3500977 L27.3242188,46.3500977 Z" id="Fill-4" fill="#FFFFFE"></path>
+            <polyline id="Fill-5" fill="#FFFFFE" points="27.3242188 74.6567383 27.3242188 79.4438477 62.484375 104.355957 62.5341797 104.355957 97.6757813 79.1503906 97.6757813 74.34375 62.4951172 99.5766602 27.3242188 74.6567383"></polyline>
+            <polyline id="Fill-6" fill="#FFFFFE" points="27.3242188 60.5927734 27.3242188 65.3803711 62.5092773 90.3100586 97.6757813 65.0864258 97.6757813 60.2797852 62.4951172 85.5126953 27.3242188 60.5927734"></polyline>
+        </g>
+    </g>
+</svg>

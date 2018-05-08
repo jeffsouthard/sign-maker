@@ -14,53 +14,12 @@
 
   <script>
     $(document).ready(function() {
-      for(var badgeName of BADGE_NAMES) {
-        buildBadgeFormField(badgeName);
-        buildBadge(badgeName, $('.badges-container')).hide();
-      }
-
-      setBadgesFromQueryString();
-
-      $( ".badge-checkbox" ).change(function() {
-        if(this.checked) {
-          showBadge(this.value);
-        } else {
-          hideBadge(this.value);
-        }
-        setUrlForBadges();
-      });
+      setupThemes();
+      setupTemplates();
+      setupBadges();
+      setupTextEditing();
     });
 
-    $( document ).ready(function() {
-
-      setThemeFromQueryString();
-      setTemplateFromQueryString();
-      setEditableAttributesFromQueryString();
-
-      $( ".adjust-font-size" ).each(function() {
-          adjustFontSize(this);
-      });
-
-      $( ".adjust-font-size" ).change(function() {
-          adjustFontSize(this);
-      });
-
-      // Trigger change event on contenteditable elements
-      // From https://stackoverflow.com/questions/1391278/contenteditable-change-events
-      $('body').on('focus', '[contenteditable]', function() {
-          var $this = $(this);
-          $this.data('before', $this.html());
-          return $this;
-      }).on('blur keyup paste input', '[contenteditable]', function() {
-          var $this = $(this);
-          if ($this.data('before') !== $this.html()) {
-              $this.data('before', $this.html());
-              onEditTextElement($this);
-              $this.trigger('change');
-          }
-          return $this;
-      });
-    });
   </script>
 
 
@@ -82,6 +41,13 @@
 <body>
 <div class="badge-form no-print">
 </div>
+<div class="sign template-title-logo">
+  <div class="title-container">
+    <div class="title editable adjust-font-size" contenteditable="true">Title</div>
+  </div>
+  <div class="logo">
+  </div>
+</div>
 <div class="sign template-title-subtitle-badges">
   <div class="title-container">
     <div class="title editable adjust-font-size" contenteditable="true">Title</div>
@@ -90,12 +56,13 @@
   <div class="badges-container">
   </div>
 </div>
-<div class="sign template-title-logo">
+<!-- <div class="sign template-title-badges-with-labels">
   <div class="title-container">
     <div class="title editable adjust-font-size" contenteditable="true">Title</div>
   </div>
-  <div class="logo">
+  <div class="badges-container">
   </div>
-</div>
+</div> -->
+
 </body>
 </html>

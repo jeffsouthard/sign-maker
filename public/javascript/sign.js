@@ -4,6 +4,35 @@ const EDITABLE_ATTRIBUTE_NAMES = [
   'subtitle'
 ];
 
+function setupTextEditing() {
+
+  setEditableAttributesFromQueryString();
+
+  $( ".adjust-font-size" ).each(function() {
+      adjustFontSize(this);
+  });
+
+  $( ".adjust-font-size" ).change(function() {
+      adjustFontSize(this);
+  });
+
+  // Trigger change event on contenteditable elements
+  // From https://stackoverflow.com/questions/1391278/contenteditable-change-events
+  $('body').on('focus', '[contenteditable]', function() {
+      var $this = $(this);
+      $this.data('before', $this.html());
+      return $this;
+  }).on('blur keyup paste input', '[contenteditable]', function() {
+      var $this = $(this);
+      if ($this.data('before') !== $this.html()) {
+          $this.data('before', $this.html());
+          onEditTextElement($this);
+          $this.trigger('change');
+      }
+      return $this;
+  });
+}
+
 function onEditTextElement(element) {
   var urlParams = new URLSearchParams(window.location.search);
   for (var attributeName of EDITABLE_ATTRIBUTE_NAMES) {
