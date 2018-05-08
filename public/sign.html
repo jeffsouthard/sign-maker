@@ -8,6 +8,7 @@
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
   <script src="javascript/themes.js"></script>
+  <script src="javascript/templates.js"></script>
   <script src="javascript/badges.js"></script>
   <script src="javascript/sign.js"></script>
 
@@ -33,6 +34,7 @@
     $( document ).ready(function() {
 
       setThemeFromQueryString();
+      setTemplateFromQueryString();
 
       // Use query params to set values, if present
       var urlParams = new URLSearchParams(window.location.search);
@@ -84,12 +86,19 @@
 <body>
 <div class="badge-form no-print">
 </div>
-<div class="sign">
+<div class="sign template-title-subtitle-badges">
   <div class="title-container">
     <div id="title" class="title editable adjust-font-size" contenteditable="true">Title</div>
     <div id="subtitle" class="subtitle editable" contenteditable="true">Subtitle</div>
   </div>
   <div class="badges-container">
+  </div>
+</div>
+<div class="sign template-title-logo">
+  <div class="title-container">
+    <div id="title" class="title editable adjust-font-size" contenteditable="true">Title</div>
+  </div>
+  <div class="logo">
   </div>
 </div>
 </body>

@@ -1,22 +1,22 @@
 function setThemeFromQueryString() {
 
   // The first theme is the default if none is specified
-  const THEMES = [
+  const THEME_NAMES = [
     'generic',
     'allstate'
   ];
 
-  var theme = THEMES[0];
+  var themeName = THEME_NAMES[0];
 
   var urlParams = new URLSearchParams(window.location.search);
   if (urlParams.has('theme')) {
-    theme = urlParams.get('theme');
-    if ( THEMES.indexOf(theme) == -1 ) {
-      console.log("Theme not found: " + theme + ". Using " + THEMES[0] + ". All themes: " + THEMES.join(', '));
-      theme = THEMES[0];
+    themeName = urlParams.get('theme');
+    if ( THEME_NAMES.indexOf(themeName) == -1 ) {
+      console.log("Theme not found: " + themeName + ". Using " + THEME_NAMES[0] + ". All themes: " + THEME_NAMES.join(', '));
+      themeName = THEME_NAMES[0];
     }
   }
 
-  var url = ['themes', theme, 'theme.css'].join('/');
+  var url = ['themes', themeName, 'theme.css'].join('/');
   $('#theme-stylesheet').attr('href',url);
 }

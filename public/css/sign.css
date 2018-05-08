@@ -52,3 +52,10 @@
     flex-shrink: 1;
     margin: 0vw 0vw;
 }
+
+.sign > .logo {
+    width: 60vw;
+    height: 20vw;
+    text-align: center;
+    background-color: #eee;
+}
