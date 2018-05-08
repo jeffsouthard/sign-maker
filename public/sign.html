@@ -7,8 +7,10 @@
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
+  <script src="javascript/themes.js"></script>
   <script src="javascript/badges.js"></script>
   <script src="javascript/sign.js"></script>
+
   <script>
     $(document).ready(function() {
       for(var badgeName of BADGE_NAMES) {
@@ -29,6 +31,9 @@
     });
 
     $( document ).ready(function() {
+
+      setThemeFromQueryString();
+
       // Use query params to set values, if present
       var urlParams = new URLSearchParams(window.location.search);
       if (urlParams.has('title')) $('#title').text(urlParams.get('title'));
@@ -64,7 +69,7 @@
   <link rel="stylesheet" href="css/main.css" type="text/css" />
   <link rel="stylesheet" href="css/badge-form.css" type="text/css" />
   <link rel="stylesheet" href="css/sign.css" type="text/css" />
-  <link rel="stylesheet" href="themes/allstate/theme.css" type="text/css" />
+  <link id="theme-stylesheet" rel="stylesheet" type="text/css" />
   <style type="text/css" media="print">
 
   @page
