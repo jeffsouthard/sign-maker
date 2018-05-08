@@ -8,9 +8,11 @@
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
+  <script src="javascript/themes.js"></script>
   <script src="javascript/badges.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
+      setThemeFromQueryString();
       for(var badgeName of BADGE_NAMES) {
         var legendItem = $("<li></li>");
         buildBadge(badgeName, legendItem);
@@ -20,8 +22,8 @@
     });
   </script>
   <link rel="stylesheet" href="css/main.css" type="text/css" />
-  <link rel="stylesheet" href="css/legend.css" type="text/css" />
-  <link rel="stylesheet" href="themes/allstate/theme.css" type="text/css" />
+  <link rel="stylesheet" href="css/legend-poster.css" type="text/css" />
+  <link id="theme-stylesheet" rel="stylesheet" type="text/css" />
   <style type="text/css" media="print">
 
   @page
@@ -34,7 +36,9 @@
 
 </head>
 <body>
-<h1 class="legend-title">Team Practices</h1>
-<ul class="legend"></ul>
+  <div class="legend-poster">
+    <h1 class="legend-title">Team Practices</h1>
+    <ul class="legend"></ul>
+  </div>
 </body>
 </html>

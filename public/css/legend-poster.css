@@ -1,26 +1,25 @@
-.legend-title {
+.legend-poster .legend-title {
   text-align: center;
   font-size: 8vw;
 }
 
-.legend {
+.legend-poster .legend {
   list-style: none;
 }
 
-.legend li {
+.legend-poster .legend li {
    display: -webkit-flex;
    display: flex;
    flex-direction: row;
    align-items: center;
 }
 
-.legend img {
+.legend-poster .legend img {
   height: 110px;
   width: 110px;
 }
 
-.legend span {
+.legend-poster .legend span {
   font-size: 7vw;
-  font-family: 'Exo-Regular', Fallback, sans-serif;
   padding-left: 10px;
 }
