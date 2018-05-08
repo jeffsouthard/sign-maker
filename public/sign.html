@@ -35,11 +35,7 @@
 
       setThemeFromQueryString();
       setTemplateFromQueryString();
-
-      // Use query params to set values, if present
-      var urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.has('title')) $('#title').text(urlParams.get('title'));
-      if (urlParams.has('subtitle')) $('#subtitle').text(urlParams.get('subtitle'));
+      setEditableAttributesFromQueryString();
 
       $( ".adjust-font-size" ).each(function() {
           adjustFontSize(this);
@@ -59,7 +55,7 @@
           var $this = $(this);
           if ($this.data('before') !== $this.html()) {
               $this.data('before', $this.html());
-              setUrlForText();
+              onEditTextElement($this);
               $this.trigger('change');
           }
           return $this;
@@ -88,15 +84,15 @@
 </div>
 <div class="sign template-title-subtitle-badges">
   <div class="title-container">
-    <div id="title" class="title editable adjust-font-size" contenteditable="true">Title</div>
-    <div id="subtitle" class="subtitle editable" contenteditable="true">Subtitle</div>
+    <div class="title editable adjust-font-size" contenteditable="true">Title</div>
+    <div class="subtitle editable" contenteditable="true">Subtitle</div>
   </div>
   <div class="badges-container">
   </div>
 </div>
 <div class="sign template-title-logo">
   <div class="title-container">
-    <div id="title" class="title editable adjust-font-size" contenteditable="true">Title</div>
+    <div class="title editable adjust-font-size" contenteditable="true">Title</div>
   </div>
   <div class="logo">
   </div>

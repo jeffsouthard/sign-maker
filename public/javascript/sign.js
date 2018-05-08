@@ -1,8 +1,24 @@
-function setUrlForText() {
+
+const EDITABLE_ATTRIBUTE_NAMES = [
+  'title',
+  'subtitle'
+];
+
+function onEditTextElement(element) {
   var urlParams = new URLSearchParams(window.location.search);
-  urlParams.set("title", $("#title").html());
-  urlParams.set("subtitle", $("#subtitle").html());
+  for (var attributeName of EDITABLE_ATTRIBUTE_NAMES) {
+      if (element.hasClass(attributeName)) {
+        urlParams.set(attributeName, element.html());
+      }
+  }
   window.history.replaceState(null, null, "sign.html?"+urlParams.toString());
+}
+
+function setEditableAttributesFromQueryString() {
+  var urlParams = new URLSearchParams(window.location.search);
+  for (attributeName of EDITABLE_ATTRIBUTE_NAMES) {
+    if (urlParams.has(attributeName)) $('.'+attributeName).text(urlParams.get(attributeName));
+  }
 }
 
 function adjustFontSize(element) {
