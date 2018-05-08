@@ -3,6 +3,7 @@ function setThemeFromQueryString() {
   // The first theme is the default if none is specified
   const THEME_NAMES = [
     'generic',
+    'pivotal',
     'allstate'
   ];
 

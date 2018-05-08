@@ -1,0 +1,29 @@
+/* Pivotal theme */
+
+@font-face {
+  font-family: ProximaNova-Bold;
+  src: url(fonts/ProximaNova-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: ProximaNova-Reg;
+  src: url(fonts/ProximaNova-Reg.otf) format('opentype');
+}
+
+/* Sign page */
+
+.sign .title {
+    color: black;
+    font-family: 'ProximaNova-Bold', Fallback, sans-serif;
+}
+
+.sign .subtitle {
+    color: black;
+    font-family: 'ProximaNova-Reg', Fallback, sans-serif;
+}
+
+/* Legend page */
+
+.legend-title {
+  font-family: 'ProximaNova-Bold', Fallback, sans-serif;
+}
