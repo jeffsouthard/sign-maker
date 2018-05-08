@@ -12,7 +12,7 @@ function setThemeFromQueryString() {
   if (urlParams.has('theme')) {
     theme = urlParams.get('theme');
     if ( THEMES.indexOf(theme) == -1 ) {
-      console.log("Theme not found: " + theme + "; using default theme");
+      console.log("Theme not found: " + theme + ". Using " + THEMES[0] + ". All themes: " + THEMES.join(', '));
       theme = THEMES[0];
     }
   }
