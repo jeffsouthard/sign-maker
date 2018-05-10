@@ -32,7 +32,30 @@ class GraphicBox {
       }
       Badge.setUrlForBadges();
     });
+
+    $( ".badges-container" ).click(function() {
+      var el = $(this);
+      if (el.hasClass("selected")) {
+        GraphicBox.deselectBadgesContainer();
+      } else {
+        GraphicBox.selectBadgesContainer();
+      }
+    });
+
+    $( ".editable" ).click(function() {
+      GraphicBox.deselectBadgesContainer();
+    });
+
   }
 
+  static selectBadgesContainer() {
+    $( ".badge-form" ).show();
+    $( ".badges-container" ).addClass("selected");
+  }
+
+  static deselectBadgesContainer() {
+    $( ".badge-form" ).hide();
+    $( ".badges-container" ).removeClass("selected");
+  }
 
 }

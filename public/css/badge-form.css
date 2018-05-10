@@ -7,9 +7,10 @@
   line-height: 200%;
   position: absolute;
   top: 70vw;
-  right: 10vw;
-  left: 10vw;
+  right: 15vw;
+  left: 15vw;
   text-align: left;
+  display: none;
 }
 
 .badge-form label {
