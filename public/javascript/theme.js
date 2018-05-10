@@ -4,7 +4,6 @@ class Theme {
 
   constructor(params) {
     this.name = params['name'];
-    this.badgeSetName = params['badgeSetName'];
   }
 
   stylesheetPath() {
@@ -34,7 +33,7 @@ class Theme {
 }
 
 const THEMES = [
-  new Theme({'name': 'generic', 'badgeSetName': 'tech'}),
-  new Theme({'name': 'pivotal', 'badgeSetName': 'tech'}),
-  new Theme({'name': 'allstate', 'badgeSetName': 'agile-practices'})
+  new Theme({'name': 'generic'}),
+  new Theme({'name': 'pivotal'}),
+  new Theme({'name': 'allstate'})
 ];

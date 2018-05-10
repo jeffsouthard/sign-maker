@@ -4,6 +4,7 @@ class Template {
 
   constructor(params) {
     this.name = params['name'];
+    this.badgeSetName = params['badgeSetName'];
   }
 
   elementSelector() {
@@ -35,6 +36,10 @@ class Template {
     return signElement;
   }
 
+  loadBadges() {
+    if (this.badgeSetName) Badge.loadBadgeSet(this.badgeSetName)
+  }
+
   static pickTemplate(name) {
     var template = Template.findByName(name);
     if ( template == null ) {
@@ -59,7 +64,15 @@ class Template {
 
 // The first theme is the default if none is specified
 const TEMPLATES = [
-  new Template({'name': 'title-logo'}),
-  new Template({'name': 'title-badges-with-labels'}),
-  new Template({'name': 'title-subtitle-badges'})
+  new Template({
+    'name': 'title-logo'
+  }),
+  new Template({
+    'name': 'title-badges-with-labels',
+    'badgeSetName': 'tech'
+  }),
+  new Template({
+    'name': 'title-subtitle-badges',
+    'badgeSetName': 'agile-practices'
+  })
 ];

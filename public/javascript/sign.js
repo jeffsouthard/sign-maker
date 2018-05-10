@@ -12,6 +12,7 @@ class Sign {
     $('#theme-stylesheet').attr('href',this.theme.stylesheetPath());
     // template
     this.template.buildSign(this, $('#sign-container'));
+    this.template.loadBadges();
     // rest
     TextBox.initializePage();
     GraphicBox.initializePage();
