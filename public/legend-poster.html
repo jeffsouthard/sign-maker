@@ -2,19 +2,20 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Sign Legend</title>
+  <title>Legend Poster</title>
 
   <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
-  <script src="javascript/themes.js"></script>
-  <script src="javascript/badges.js"></script>
+  <script src="javascript/utilities.js"></script>
+  <script src="javascript/theme.js"></script>
+  <script src="javascript/badge.js"></script>
   <script src="javascript/legend-poster.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-      setThemeFromQueryString();
-      setupLegendPoster();
+      var legendPoster = new LegendPoster(getUrlParams());
+      legendPoster.initializePage();
     });
   </script>
   <link rel="stylesheet" href="css/main.css" type="text/css" />

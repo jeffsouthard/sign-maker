@@ -7,17 +7,18 @@
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
-  <script src="javascript/themes.js"></script>
-  <script src="javascript/templates.js"></script>
-  <script src="javascript/badges.js"></script>
+  <script src="javascript/utilities.js"></script>
+  <script src="javascript/theme.js"></script>
+  <script src="javascript/template.js"></script>
+  <script src="javascript/badge.js"></script>
+  <script src="javascript/graphic-box.js"></script>
+  <script src="javascript/text-box.js"></script>
   <script src="javascript/sign.js"></script>
 
   <script>
     $(document).ready(function() {
-      setupThemes();
-      setupTemplates();
-      setupBadges();
-      setupTextEditing();
+      var sign = new Sign(getUrlParams());
+      sign.initializePage();
     });
 
   </script>
@@ -41,28 +42,7 @@
 <body>
 <div class="badge-form no-print">
 </div>
-<div class="sign template-title-logo">
-  <div class="title-container">
-    <div class="title editable adjust-font-size" contenteditable="true">Title</div>
-  </div>
-  <div class="logo">
-  </div>
+<div id="sign-container">
 </div>
-<div class="sign template-title-subtitle-badges">
-  <div class="title-container">
-    <div class="title editable adjust-font-size" contenteditable="true">Title</div>
-    <div class="subtitle editable" contenteditable="true">Subtitle</div>
-  </div>
-  <div class="badges-container">
-  </div>
-</div>
-<!-- <div class="sign template-title-badges-with-labels">
-  <div class="title-container">
-    <div class="title editable adjust-font-size" contenteditable="true">Title</div>
-  </div>
-  <div class="badges-container">
-  </div>
-</div> -->
-
 </body>
 </html>
