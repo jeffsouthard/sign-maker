@@ -1,3 +1,12 @@
+body {
+  margin: 0;
+}
+
+@media print {
+  .no-print, .no-print * {
+    display: none !important;
+  }
+}
 
 .editable:hover, .badges-container:hover {
    border: 1px solid ButtonHighlight;

@@ -1,3 +1,12 @@
+body {
+  margin: 0;
+}
+
+@media print {
+  .no-print, .no-print * {
+    display: none !important;
+  }
+}
 .legend-poster .legend-title {
   text-align: center;
   font-size: 8vw;
