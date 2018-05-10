@@ -4,12 +4,14 @@ class Badge {
 
   constructor(params) {
     this.name = params['name'];
+    this.label = params['label'];
     this.badgeSetName = params['badgeSetName'];
   }
 
   static loadBadgeSet(badgeSetName) {
-    for (var badgeHash of BADGE_DATA[badgeSetName]) {
-      BADGES.push(new Badge({ 'badgeSetName': badgeSetName, 'name': badgeHash['name']}));
+    for (var params of BADGE_DATA[badgeSetName]) {
+      params['badgeSetName'] = badgeSetName;
+      BADGES.push(new Badge( params ) );
     }
   }
 
@@ -22,7 +24,7 @@ class Badge {
       value: this.name
     });
 
-    var label = $('<label />').text(this.name);
+    var label = $('<label />').text(this.label);
     checkbox.prependTo(label);
     label.appendTo($('.badge-form'));
     return label;
