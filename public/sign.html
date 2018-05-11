@@ -16,7 +16,7 @@
   <script src="javascript/sign.js"></script>
 
   <script>
-    $(document).load(function() {
+    $(window).on("load",function() {
       var sign = new Sign(getUrlParams());
       sign.initializePage();
     });
