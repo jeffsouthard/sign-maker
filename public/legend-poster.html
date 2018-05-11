@@ -13,7 +13,7 @@
   <script type='text/javascript' src="javascript/badge.js"></script>
   <script type='text/javascript' src="javascript/legend-poster.js"></script>
   <script type="text/javascript">
-    $(window).on("load",function() {
+    $(window).on("ready",function() {
       var legendPoster = new LegendPoster(getUrlParams());
       legendPoster.initializePage();
     });
